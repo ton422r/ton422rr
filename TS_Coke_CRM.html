@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coca-Cola Telesales CRM</title>
+
+https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap
+
+<style>
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ font-family:'Prompt',sans-serif;
+ background:#f5f6f8;
+ color:#222;
+}
+
+.header{
+ background:#E61A27;
+ color:white;
+ padding:16px 30px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+}
+
+.logo{
+ font-size:30px;
+ font-weight:700;
+}
+
+.header-right{
+ text-align:right;
+}
+
+.container{
+ display:grid;
+ grid-template-columns: 2fr 1fr;
+ gap:20px;
+ padding:20px;
+}
+
+.card{
+ background:white;
+ border-radius:16px;
+ padding:20px;
+ box-shadow:0 2px 8px rgba(0,0,0,0.08);
+ margin-bottom:20px;
+}
+
+.section-title{
+ font-size:20px;
+ font-weight:700;
+ margin-bottom:15px;
+ color:#E61A27;
+}
+
+.profile-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+}
+
+.field{
+ background:#fafafa;
+ border:1px solid #e5e5e5;
+ padding:12px;
+ border-radius:10px;
+}
+
+.field label{
+ display:block;
+ font-size:12px;
+ color:#777;
+ margin-bottom:4px;
+}
+
+.badge{
+ display:inline-block;
+ padding:6px 12px;
+ border-radius:20px;
+ font-size:12px;
+ font-weight:600;
+}
+
+.gold{
+ background:#FFF3CD;
+ color:#856404;
+}
+
+.high{
+ background:#F8D7DA;
+ color:#721C24;
+}
+
+.btn{
+ background:#E61A27;
+ color:white;
+ border:none;
+ padding:12px 24px;
+ border-radius:10px;
+ cursor:pointer;
+ font-size:15px;
+ font-weight:600;
+}
+
+.btn:hover{
+ background:#c71522;
+}
+
+.ai-panel{
+ background:#fff4f4;
+ border-left:5px solid #E61A27;
+}
+
+textarea,
+input,
+select{
+ width:100%;
+ padding:12px;
+ border:1px solid #ddd;
+ border-radius:8px;
+ margin-top:5px;
+}
+
+.case{
+ background:#fff8e1;
+ padding:10px;
+ border-radius:8px;
+ margin-bottom:10px;
+}
+
+.kpi{
+ display:flex;
+ justify-content:space-between;
+ margin-bottom:10px;
+}
+
+.kpi strong{
+ color:#E61A27;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">
+🥤 Coca-Cola Telesales CRM
+</div>
+
+<div class="header-right">
+Campaign: COKE_Q4_2026<br>
+Agent: TS001
+</div>
+
+</div>
+
+<div class="container">
+
+<!-- LEFT PANEL -->
+<div>
+
+<div class="card">
+
+<div class="section-title">
+Customer 360 Profile
+</div>
+
+<div class="profile-grid">
+
+<div class="field">
+<label>Customer Name</label>
+สมชาย วัฒนกุล
+</div>
+
+<div class="field">
+<label>Mobile Number</label>
+089-812-3456
+</div>
+
+<div class="field">
+<label>Province</label>
+Bangkok
+</div>
+
+<div class="field">
+<label>Customer Tier</label>
+<span class="badge gold">Gold</span>
+</div>
+
+<div class="field">
+<label>Lifetime Value</label>
+350,000 THB
+</div>
+
+<div class="field">
+<label>Priority</label>
+<span class="badge high">High</span>
+</div>
+
+<div class="field">
+<label>Preferred Product</label>
+Coke Original
+</div>
+
+<div class="field">
+<label>Next Best Offer</label>
+Coke Zero Bundle
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">
+📞 Click to Dial
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+Salesforce Customer Information
+</div>
+
+<div class="profile-grid">
+
+<div class="field">
+<label>SFDC Account ID</label>
+001A000001
+</div>
+
+<div class="field">
+<label>Open Cases</label>
+0
+</div>
+
+<div class="field">
+<label>Last Order Date</label>
+05-Oct-2026
+</div>
+
+<div class="field">
+<label>Last Order Value</label>
+12,500 THB
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+Order Capture
+</div>
+
+<label>Recommended Product</label>
+<input value="Coke Zero Bundle">
+
+<br><br>
+
+<label>Order Amount (THB)</label>
+<input value="2500">
+
+<br><br>
+
+<label>Requested Delivery Date</label>
+<input type="date">
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+Wrap-up & Notes
+</div>
+
+<label>Disposition</label>
+
+<select>
+<option>SALE_SUCCESS</option>
+<option>CALL_BACK</option>
+<option>NO_ANSWER</option>
+<option>NOT_INTERESTED</option>
+<option>FOLLOW_UP</option>
+</select>
+
+<br><br>
+
+<label>Callback Date</label>
+<input type="date">
+
+<br><br>
+
+<label>Agent Notes</label>
+
+<textarea rows="5">
+Customer interested in Coke Zero Bundle.
+Requested delivery next week.
+Promotion details explained.
+</textarea>
+
+</div>
+
+</div>
+
+<!-- RIGHT PANEL -->
+<div>
+
+<div class="card ai-panel">
+
+<div class="section-title">
+🤖 Agent Copilot
+</div>
+
+<strong>Recommended Offer</strong>
+
+<p style="margin-top:10px;">
+Coke Zero Bundle
+</p>
+
+<br>
+
+<strong>Suggested Pitch</strong>
+
+<p style="margin-top:10px;">
+Customer is Gold tier and frequently purchases Coke Original.
+Offer Coke Zero Bundle and highlight volume discount and loyalty rewards.
+</p>
+
+<br>
+
+<strong>Next Best Action</strong>
+
+<ul style="margin-left:20px;margin-top:10px;">
+<li>Upsell 24-can package</li>
+<li>Mention loyalty rewards</li>
+<li>Offer free delivery promotion</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+Salesforce Open Cases
+</div>
+
+<div class="case">
+✅ No active support case found
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+Supervisor Dashboard
+</div>
+
+<div class="kpi">
+<span>Calls Today</span>
+<strong>47</strong>
+</div>
+
+<div class="kpi">
+<span>Connected</span>
+<strong>31</strong>
+</div>
+
+<div class="kpi">
+<span>Sales Won</span>
+<strong>12</strong>
+</div>
+
+<div class="kpi">
+<span>Conversion Rate</span>
+<strong>38.7%</strong>
+</div>
+
+<div class="kpi">
+<span>Average Talk Time</span>
+<strong>4m 12s</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
